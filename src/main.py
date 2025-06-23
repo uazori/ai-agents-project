@@ -7,7 +7,6 @@ from langchain_core.prompts import ChatPromptTemplate
 from vector import retriver
 
 print("Loading environment variables...")
-print("dot env path...",find_dotenv())
 load_dotenv(find_dotenv(),verbose=True)
 print("Environment variables loaded.")
 
@@ -25,15 +24,9 @@ while True:
     question = input("Enter your question: q(to quit): ")
     if question.lower() == 'q':
         print("Exiting...")
-        break
-    
+        break 
 
     reviews = retriver.invoke( question)
     result = chain.invoke({"reviews": reviews,"question": "Does pizza taste?"})
     print("Response from Ollama LLM:", result)
-   # print("Response from LLM:", result.content)
-    # Uncomment the following lines to use OpenAI's ChatOpenAI
 
-#llm = ChatOpenAI(api_key="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",temperature=0.0, model_name="gpt-4o")
-#response = llm.invoke("Hello, world!")
-#print(response.content)
