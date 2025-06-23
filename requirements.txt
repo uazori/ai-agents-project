@@ -1,0 +1,8 @@
+pytest
+dotenv
+numpy
+scikit-learn
+tensorflow
+langchain
+langchain-openai
+langchain_core
