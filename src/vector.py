@@ -8,8 +8,7 @@ f = open("src/amazon_reviews.csv")
 print(f.readline())
 f.close()
 
-
-df = pd.read_csv("src/amazon_reviews.csv",delim_whitespace=True, header=None, names=["Title", "Body", "Rating", "date"])
+df = pd.read_csv("src/amazon_reviews.csv",header=None, names=["Title", "Body", "Rating", "date"])
 embedings = OllamaEmbeddings(model="llama3.2", temperature=0.0)
 
 db_location ="./chrome_langchain_db"
