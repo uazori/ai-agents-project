@@ -10,9 +10,9 @@ print("Loading environment variables...")
 load_dotenv(find_dotenv(),verbose=True)
 print("Environment variables loaded.")
 
-def file_path = "/Users/vadymo/code/chessrating/chess-rating-server/src/main/java/com/millhouse/chessrating/controller"
+file_path = "/Users/vadymo/code/chessrating/chess-rating-server/src/main/java/com/millhouse/chessrating/controller"
 
-def llm2 = OllamaLLM(model="llama3.2", temperature=0.0)
+llm2 = OllamaLLM(model="llama3.2", temperature=0.0)
 
 language = "java"
 
