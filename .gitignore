@@ -30,6 +30,7 @@ ENV/
 env/
 env.bak/
 venv.bak/
+tmp/*
 
 # PyInstaller
 *.manifest
@@ -64,3 +65,5 @@ coverage.xml
 .env
 .env.*
 chrome_langchain_db/chroma.sqlite3
+tmp/chromadb/raw.githubusercontent.com_Integrate%20-%20Spark.md_ae20ac5b
+chroma_db_haystack/chroma.sqlite3
