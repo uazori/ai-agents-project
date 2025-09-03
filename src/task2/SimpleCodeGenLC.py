@@ -7,11 +7,11 @@ from langchain_ollama import OllamaLLM
 from langchain_core.prompts import ChatPromptTemplate
 from vector import retriver
 from typing import List, Optional
-from tools import list_files_recursive
-from tools import read_file_as_text
-from tools import create_test_file_from_code
-from tools import remove_texts
-from tools import remove_texts_with_line
+from src.fileTools import list_files_recursive
+from src.fileTools import read_file_as_text
+from src.fileTools import create_test_file_from_code
+from src.fileTools import remove_texts
+from src.fileTools import remove_texts_with_line
 
 print("Loading environment variables...")
 load_dotenv(find_dotenv(),verbose=True)
@@ -26,7 +26,6 @@ name_has_text = ["Imp"]
 filesList = list_files_recursive(file_path,fileFormat,nameNotHasText,name_has_text)
 for file in filesList:
     print("file - ", file)
-
 
 
 llm = OllamaLLM(model="llama3.2", temperature=0.0)
@@ -45,6 +44,8 @@ for codeFilePath in filesList:
     create_test_file_from_code (codeFilePath,resCleanCode,"java")
     print("test file generated:")
     break # break after first file for testing purposes
+
+
 
 
 
