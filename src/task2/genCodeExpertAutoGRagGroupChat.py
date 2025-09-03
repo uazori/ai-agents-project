@@ -127,15 +127,3 @@ def rag_chat():
 
 
 rag_chat()
-
-# print("Response from Ollama LLM:", chat_result.chat_history)
-# final_message = chat_result.chat_history[-1]
-# print("final:", final_message)
-# for message in chat_result.chat_history:
-#             print("chat_history : ",message)
-
-# print("result summary", chat_result.summary)
-# print("result cost:", chat_result.cost)
-# create_test_file_from_code (file_path, documentation, "md")
-
-
